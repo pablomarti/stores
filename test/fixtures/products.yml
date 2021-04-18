@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id          :bigint           not null, primary key
+#  store_id    :bigint           not null
+#  name        :string
+#  description :text
+#  price       :decimal(8, 2)
+#  active      :boolean
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  store: one
+  name: MyString
+  description: MyText
+  price: 9.99
+  active: false
+
+two:
+  store: two
+  name: MyString
+  description: MyText
+  price: 9.99
+  active: false
