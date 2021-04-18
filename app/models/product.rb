@@ -13,4 +13,12 @@
 #
 class Product < ApplicationRecord
   belongs_to :store
+
+  after_create :notify_subscriber_of_addition
+
+  private
+
+  def notify_subscriber_of_addition
+    StoresSchema.subscriptions.trigger("newProduct", {}, self)
+  end
 end
