@@ -19,6 +19,6 @@ class Product < ApplicationRecord
   private
 
   def notify_subscriber_of_addition
-    StoresSchema.subscriptions.trigger("newProduct", {}, self)
+    StoresSchema.subscriptions.trigger('newProduct', {}, self)
   end
 end

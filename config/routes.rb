@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end
 
   post "/graphql", to: "graphql#execute"
+
+  root 'main#index'
 end
